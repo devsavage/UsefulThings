@@ -3,10 +3,14 @@ package tv.savageboy74.RandomJunk;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent;
 import net.minecraft.init.Blocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import tv.savageboy74.RandomJunk.handler.ConfigHandler;
 import tv.savageboy74.RandomJunk.util.LogHelper;
@@ -47,5 +51,13 @@ public class RandomJunk
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+    }
+
+    @SubscribeEvent
+    public void checkUpdate(PlayerEvent.PlayerLoggedInEvent event) {
+        if (Reference.OUTDATED) {
+            event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.AQUA + "RandomJunk " +  EnumChatFormatting.WHITE + "is " + EnumChatFormatting.DARK_RED + "outdated!"));
+            event.player.addChatComponentMessage(new ChatComponentText("Current Version: " + EnumChatFormatting.DARK_RED + Reference.CURRENTVERSION + EnumChatFormatting.WHITE +  " Newest Version: " + EnumChatFormatting.DARK_GREEN + Reference.NEWVERSION));
+        }
     }
 }
