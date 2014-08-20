@@ -13,21 +13,29 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import tv.savageboy74.RandomJunk.handler.ConfigHandler;
+import tv.savageboy74.RandomJunk.init.ModArmorMaterial;
+import tv.savageboy74.RandomJunk.init.ModBlocks;
+import tv.savageboy74.RandomJunk.init.ModItems;
+import tv.savageboy74.RandomJunk.init.ModToolMaterial;
 import tv.savageboy74.RandomJunk.util.LogHelper;
 import tv.savageboy74.RandomJunk.util.Reference;
 import tv.savageboy74.RandomJunk.util.UpdateChecker;
 
 import java.io.IOException;
 
-@Mod(modid = Reference.MOD_ID, version = Reference.VERSION, name = Reference.MOD_NAME, guiFactory = Reference.GUI_FACTORY_CLASS)
+@Mod(modid = Reference.MOD_ID, version = Reference.VERSION, name = Reference.MOD_NAME, guiFactory = Reference.GUI_FACTORY_CLASS) //dependencies = Reference.DEPENDENCIES)
 public class RandomJunk
 {
+
+    @Mod.Instance(Reference.MOD_ID)
+    public static RandomJunk instance;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         FMLCommonHandler.instance().bus().register(this);
         MinecraftForge.EVENT_BUS.register(this);
+        ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
 
         if (ConfigHandler.checkForUpdates == true) {
@@ -46,6 +54,8 @@ public class RandomJunk
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+        ModItems.init();
+        ModBlocks.init();
     }
 
     @EventHandler

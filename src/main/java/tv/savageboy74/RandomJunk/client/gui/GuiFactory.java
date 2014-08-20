@@ -3,6 +3,7 @@ package tv.savageboy74.RandomJunk.client.gui;
 import cpw.mods.fml.client.IModGuiFactory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
+import tv.savageboy74.RandomJunk.client.gui.ModGuiConfig;
 
 import java.util.Set;
 

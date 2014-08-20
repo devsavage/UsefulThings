@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "RandomJunk",
+  "name": "RandomJunk",
+  "description": "A bunch of random things added to Minecraft that I found useful.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["savageboy74"],
+  "credits": "savageboy74",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
