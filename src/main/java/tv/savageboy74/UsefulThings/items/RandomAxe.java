@@ -38,7 +38,7 @@ public class RandomAxe extends ItemAxe
         this.setMaxStackSize(1);
         this.efficiencyOnProperMaterial = 15.0F;
         this.damageVsEntity = 5;
-        this.setUnlocalizedName("randomAxe");
+        this.setUnlocalizedName("usefulthings:usefulAxe");
     }
 
     public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List list, boolean i)
@@ -201,5 +201,17 @@ public class RandomAxe extends ItemAxe
         }
 
         return 0;
+    }
+
+    @Override
+    public boolean hasEffect(ItemStack itemStack)
+    {
+        if (!getActivated(itemStack))
+        {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }

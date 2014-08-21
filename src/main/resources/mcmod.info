@@ -1,8 +1,8 @@
 [
 {
-  "modid": "RandomJunk",
-  "name": "RandomJunk",
-  "description": "A bunch of random things added to Minecraft that I found useful.",
+  "modid": "usefulthings",
+  "name": "UsefulThings",
+  "description": "A bundle of random things that I found useful.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
