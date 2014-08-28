@@ -1,9 +1,9 @@
-package tv.savageboy74.usefulthings.handler;
+package tv.savageboy74.usefulthings.common.handler;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.common.config.Configuration;
-import tv.savageboy74.usefulthings.util.Reference;
+import tv.savageboy74.usefulthings.common.util.Reference;
 
 import java.io.File;
 

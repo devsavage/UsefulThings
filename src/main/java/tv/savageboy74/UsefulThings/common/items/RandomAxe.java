@@ -1,4 +1,4 @@
-package tv.savageboy74.usefulthings.items;
+package tv.savageboy74.usefulthings.common.items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,10 +14,11 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
-import tv.savageboy74.usefulthings.init.ModToolMaterial;
-import tv.savageboy74.usefulthings.util.NBTGlobalOwner;
-import tv.savageboy74.usefulthings.util.Reference;
-import tv.savageboy74.usefulthings.util.Strings;
+import tv.savageboy74.usefulthings.common.init.ModCreativeTab;
+import tv.savageboy74.usefulthings.common.init.ModToolMaterial;
+import tv.savageboy74.usefulthings.common.util.NBTGlobalOwner;
+import tv.savageboy74.usefulthings.common.util.Reference;
+import tv.savageboy74.usefulthings.common.util.Strings;
 
 import java.util.List;
 
@@ -38,6 +39,7 @@ public class RandomAxe extends ItemAxe
         this.setMaxStackSize(1);
         this.efficiencyOnProperMaterial = 15.0F;
         this.damageVsEntity = 5;
+        this.setCreativeTab(ModCreativeTab.USEFULTHINGS_TAB);
         this.setUnlocalizedName("usefulthings:usefulAxe");
     }
 
@@ -202,7 +204,7 @@ public class RandomAxe extends ItemAxe
 
         return 0;
     }
-
+/*
     @Override
     public boolean hasEffect(ItemStack itemStack)
     {
@@ -214,4 +216,5 @@ public class RandomAxe extends ItemAxe
             return true;
         }
     }
+*/
 }

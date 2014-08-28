@@ -1,6 +1,7 @@
 package tv.savageboy74.usefulthings;
 
 import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -11,12 +12,16 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.common.MinecraftForge;
-import tv.savageboy74.usefulthings.handler.ConfigHandler;
-import tv.savageboy74.usefulthings.init.ModBlocks;
-import tv.savageboy74.usefulthings.init.ModItems;
-import tv.savageboy74.usefulthings.util.LogHelper;
-import tv.savageboy74.usefulthings.util.Reference;
-import tv.savageboy74.usefulthings.util.UpdateChecker;
+import tv.savageboy74.usefulthings.client.handler.KeyInputEventHandler;
+import tv.savageboy74.usefulthings.common.handler.ConfigHandler;
+import tv.savageboy74.usefulthings.common.init.ModBlocks;
+import tv.savageboy74.usefulthings.common.init.ModItems;
+import tv.savageboy74.usefulthings.common.items.RandomSword;
+import tv.savageboy74.usefulthings.common.proxy.IProxy;
+import tv.savageboy74.usefulthings.common.util.DebugOutput;
+import tv.savageboy74.usefulthings.common.util.LogHelper;
+import tv.savageboy74.usefulthings.common.util.Reference;
+import tv.savageboy74.usefulthings.common.util.UpdateChecker;
 
 import java.io.IOException;
 
@@ -27,13 +32,18 @@ public class UsefulThings
     @Mod.Instance(Reference.MOD_ID)
     public static UsefulThings instance;
 
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.SERVER_PROXY)
+    public static IProxy proxy;
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         FMLCommonHandler.instance().bus().register(this);
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(DebugOutput.class);
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
+        proxy.registerKeyBindings();
 
         if (ConfigHandler.checkForUpdates == true) {
 
@@ -51,13 +61,20 @@ public class UsefulThings
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+        FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+
         ModItems.init();
         ModBlocks.init();
+
+        LogHelper.info("Initialization Complete.");
+
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
+
+        LogHelper.info("Post-Initialization Complete.");
     }
 
     @SubscribeEvent

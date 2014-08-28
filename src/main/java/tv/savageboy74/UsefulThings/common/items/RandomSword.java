@@ -1,5 +1,6 @@
-package tv.savageboy74.usefulthings.items;
+package tv.savageboy74.usefulthings.common.items;
 
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -14,10 +15,13 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
-import tv.savageboy74.usefulthings.init.ModToolMaterial;
-import tv.savageboy74.usefulthings.util.NBTGlobalOwner;
-import tv.savageboy74.usefulthings.util.Reference;
-import tv.savageboy74.usefulthings.util.Strings;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import tv.savageboy74.usefulthings.common.init.ModCreativeTab;
+import tv.savageboy74.usefulthings.common.init.ModToolMaterial;
+import tv.savageboy74.usefulthings.common.util.LogHelper;
+import tv.savageboy74.usefulthings.common.util.NBTGlobalOwner;
+import tv.savageboy74.usefulthings.common.util.Reference;
+import tv.savageboy74.usefulthings.common.util.Strings;
 
 import java.util.List;
 import java.util.Random;
@@ -34,9 +38,9 @@ public class RandomSword extends ItemSword
         super(ModToolMaterial.randomTool);
         this.setMaxStackSize(1);
         this.setFull3D();
-        hitDamage = 10.0F;
+        hitDamage = 5.0F;
+        this.setCreativeTab(ModCreativeTab.USEFULTHINGS_TAB);
         this.setUnlocalizedName("usefulthings:usefulSword");
-
     }
 
     @Override
@@ -126,7 +130,7 @@ public class RandomSword extends ItemSword
 
         return super.func_150893_a(par1ItemStack, par2Block);
     }
-/*
+
     public float getDamageVsEntity(Entity entity, Random random, ItemStack itemStack)
     {
         if (getActivated(itemStack))
@@ -141,7 +145,7 @@ public class RandomSword extends ItemSword
 
         return this.hitDamage;
     }
-*/
+
     public float func_82803_g()
     {
         return 4.0F;
@@ -174,7 +178,7 @@ public class RandomSword extends ItemSword
     {
         if (par2Block.equals(Blocks.web))
         {
-            return 15.0F;
+            return 10.0F;
         } else
         {
             Material material = par2Block.getMaterial();

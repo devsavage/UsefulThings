@@ -1,8 +1,8 @@
-package tv.savageboy74.usefulthings.init;
+package tv.savageboy74.usefulthings.common.init;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.item.Item;
-import tv.savageboy74.usefulthings.items.*;
+import tv.savageboy74.usefulthings.common.items.*;
 
 public class ModItems
 {

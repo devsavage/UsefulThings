@@ -4,8 +4,8 @@ import cpw.mods.fml.client.config.GuiConfig;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
-import tv.savageboy74.usefulthings.handler.ConfigHandler;
-import tv.savageboy74.usefulthings.util.Reference;
+import tv.savageboy74.usefulthings.common.handler.ConfigHandler;
+import tv.savageboy74.usefulthings.common.util.Reference;
 
 public class ModGuiConfig extends GuiConfig
 {

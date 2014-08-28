@@ -1,7 +1,7 @@
-package tv.savageboy74.usefulthings.items;
+package tv.savageboy74.usefulthings.common.items;
 
 import net.minecraft.item.ItemPickaxe;
-import tv.savageboy74.usefulthings.init.ModToolMaterial;
+import tv.savageboy74.usefulthings.common.init.ModToolMaterial;
 
 public class RandomPickaxe extends ItemPickaxe
 {

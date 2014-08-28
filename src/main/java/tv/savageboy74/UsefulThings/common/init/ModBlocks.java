@@ -1,4 +1,4 @@
-package tv.savageboy74.usefulthings.init;
+package tv.savageboy74.usefulthings.common.init;
 
 public class ModBlocks
 {

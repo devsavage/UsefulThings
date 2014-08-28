@@ -1,4 +1,4 @@
-package tv.savageboy74.usefulthings.util;
+package tv.savageboy74.usefulthings.common.util;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

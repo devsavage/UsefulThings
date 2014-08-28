@@ -1,4 +1,4 @@
-package tv.savageboy74.usefulthings.util;
+package tv.savageboy74.usefulthings.common.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
