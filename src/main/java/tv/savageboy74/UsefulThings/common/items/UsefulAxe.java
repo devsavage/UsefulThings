@@ -22,7 +22,7 @@ import tv.savageboy74.usefulthings.common.util.Strings;
 
 import java.util.List;
 
-public class RandomAxe extends ItemAxe
+public class UsefulAxe extends ItemAxe
 {
     public static final Block[] blockAffectiveAgainst = new Block[]{Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.bed, Blocks.oak_stairs, Blocks.acacia_stairs, Blocks.birch_stairs, Blocks.dark_oak_stairs, Blocks.jungle_stairs, Blocks.spruce_stairs, Blocks.standing_sign, Blocks.wall_sign};
 
@@ -33,7 +33,7 @@ public class RandomAxe extends ItemAxe
     private static IIcon activeIcon;
     private static IIcon passiveIcon;
 
-    public RandomAxe()
+    public UsefulAxe()
     {
         super(ModToolMaterial.randomTool);
         this.setMaxStackSize(1);

@@ -7,19 +7,27 @@ import tv.savageboy74.usefulthings.common.items.*;
 public class ModItems
 {
 
-    public static Item randomSword = new RandomSword();
-    public static Item randomHoe = new RandomHoe();
-    public static Item randomAxe = new RandomAxe();
-    public static Item randomShovel = new RandomShovel();
-    public static Item randomPickaxe = new RandomPickaxe();
+    public static Item usefulSword = new UsefulSword();
+    public static Item usefulHoe = new UsefulHoe();
+    public static Item usefulAxe = new UsefulAxe();
+    public static Item usefulShovel = new UsefulShovel();
+    public static Item usefulPickaxe = new UsefulPickaxe();
+
+    public static Item usefulHelmet = new UsefulArmor(0).setUnlocalizedName("usefulthings:usefulHelmet");
+    public static Item usefulChest = new UsefulArmor(1).setUnlocalizedName("usefulthings:usefulChest");
+    public static Item usefulLeggings = new UsefulArmor(2).setUnlocalizedName("usefulthings:usefulLeggings");
+    public static Item usefulBoots = new UsefulArmor(3).setUnlocalizedName("usefulthings:usefulBoots");
 
     public static void init()
     {
-        GameRegistry.registerItem(randomAxe, "randomAxe");
-        //GameRegistry.registerItem(randomPickaxe, "randomPickaxe");
-        //GameRegistry.registerItem(randomHoe, "randomHoe");
-        //GameRegistry.registerItem(randomShovel, "randomShovel");
-        GameRegistry.registerItem(randomSword, "randomSword");
-
+        GameRegistry.registerItem(usefulAxe, "usefulAxe");
+        //GameRegistry.registerItem(usefulPickaxe, "usefulPickaxe");
+        //GameRegistry.registerItem(usefulHoe, "usefulHoe");
+        //GameRegistry.registerItem(usefulShovel, "usefulShovel");
+        GameRegistry.registerItem(usefulSword, "usefulSword");
+        GameRegistry.registerItem(usefulHelmet, "usefulHelmet");
+        GameRegistry.registerItem(usefulChest, "usefulChest");
+        GameRegistry.registerItem(usefulLeggings, "usefulLeggings");
+        GameRegistry.registerItem(usefulBoots, "usefulBoots");
     }
 }

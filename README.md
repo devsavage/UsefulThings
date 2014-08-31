@@ -1,6 +1,6 @@
 Useful Things
 ==========
-
+Current Version Being Worked On: 0.0.0.4  
 A Minecraft mod with random things that are possibly useful.  
 Formerly know as: RandomJunk  
 <div class="footer">

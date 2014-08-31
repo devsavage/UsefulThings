@@ -26,14 +26,14 @@ import tv.savageboy74.usefulthings.common.util.Strings;
 import java.util.List;
 import java.util.Random;
 
-public class RandomSword extends ItemSword
+public class UsefulSword extends ItemSword
 {
     //TODO Implement Active Stages
 
     private float hitDamage;
     private NBTTagCompound toolData;
 
-    public RandomSword()
+    public UsefulSword()
     {
         super(ModToolMaterial.randomTool);
         this.setMaxStackSize(1);

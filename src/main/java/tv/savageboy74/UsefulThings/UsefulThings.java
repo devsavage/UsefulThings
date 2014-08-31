@@ -16,7 +16,6 @@ import tv.savageboy74.usefulthings.client.handler.KeyInputEventHandler;
 import tv.savageboy74.usefulthings.common.handler.ConfigHandler;
 import tv.savageboy74.usefulthings.common.init.ModBlocks;
 import tv.savageboy74.usefulthings.common.init.ModItems;
-import tv.savageboy74.usefulthings.common.items.RandomSword;
 import tv.savageboy74.usefulthings.common.proxy.IProxy;
 import tv.savageboy74.usefulthings.common.util.DebugOutput;
 import tv.savageboy74.usefulthings.common.util.LogHelper;
