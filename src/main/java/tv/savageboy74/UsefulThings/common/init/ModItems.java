@@ -18,6 +18,8 @@ public class ModItems
     public static Item usefulLeggings = new UsefulArmor(2).setUnlocalizedName("usefulthings:usefulLeggings");
     public static Item usefulBoots = new UsefulArmor(3).setUnlocalizedName("usefulthings:usefulBoots");
 
+    public static LumberAxe lumberAxe = new LumberAxe(4.0F, Item.ToolMaterial.IRON);
+
     public static void init()
     {
         GameRegistry.registerItem(usefulAxe, "usefulAxe");
@@ -29,5 +31,6 @@ public class ModItems
         GameRegistry.registerItem(usefulChest, "usefulChest");
         GameRegistry.registerItem(usefulLeggings, "usefulLeggings");
         GameRegistry.registerItem(usefulBoots, "usefulBoots");
+        GameRegistry.registerItem(lumberAxe, "lumberAxe");
     }
 }

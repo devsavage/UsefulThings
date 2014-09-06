@@ -6,3 +6,4 @@ keys.usefulthings.placeholder2=KeyBinding Placeholder 2
 # Items
 item.usefulthings:usefulAxe.name=Useful Axe
 item.usefulthings:usefulSword.name=Useful Sword [WIP]
+item.usefulthings:lumberAxe.name=Lumber Axe

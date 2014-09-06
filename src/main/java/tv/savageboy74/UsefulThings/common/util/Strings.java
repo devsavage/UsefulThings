@@ -7,6 +7,7 @@ public class Strings
         public static final String randomAxe = "usefulAxe";
         public static final String randomAxe_activated = "usefulAxe_activated";
         public static final String randomSword = "usefulSword";
+        public static final String lumberAxe = "lumberAxe";
     }
 
     public static final class Keys
