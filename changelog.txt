@@ -1,0 +1,8 @@
+UsefulThings Changelog:
+-----------------------
+Build: 0.0.3:
+	savageboy74: Created new items and added new config option.
+Build: 0.0.2:
+	savageboy74: Created more classes and added items, made config and handlers.
+Build: 0.0.1:
+	savageboy74: Initial commit created base classes

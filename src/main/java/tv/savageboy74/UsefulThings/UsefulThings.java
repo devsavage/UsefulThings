@@ -16,6 +16,7 @@ import tv.savageboy74.usefulthings.client.handler.KeyInputEventHandler;
 import tv.savageboy74.usefulthings.common.handler.ConfigHandler;
 import tv.savageboy74.usefulthings.common.init.ModBlocks;
 import tv.savageboy74.usefulthings.common.init.ModItems;
+import tv.savageboy74.usefulthings.common.init.ModRecipes;
 import tv.savageboy74.usefulthings.common.proxy.IProxy;
 import tv.savageboy74.usefulthings.common.util.DebugOutput;
 import tv.savageboy74.usefulthings.common.util.LogHelper;
@@ -64,6 +65,7 @@ public class UsefulThings
 
         ModItems.init();
         ModBlocks.init();
+        ModRecipes.init();
 
         LogHelper.info("Initialization Complete.");
 

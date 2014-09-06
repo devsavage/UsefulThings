@@ -4,7 +4,7 @@ public class Reference
 {
     public static final String MOD_ID = "usefulthings";
     public static final String MOD_NAME = "UsefulThings";
-    public static final String VERSION = "1.7.10-0.0.2";
+    public static final String VERSION = "1.7.10-0.0.3";
     public static final String MC_VERSION = "1.7.10";
 
     public static final String CLIENT_PROXY = "tv.savageboy74.usefulthings.common.proxy.ClientProxy";
