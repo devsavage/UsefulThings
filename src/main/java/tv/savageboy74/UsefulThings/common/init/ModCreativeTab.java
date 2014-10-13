@@ -12,7 +12,7 @@ public class ModCreativeTab
         @Override
         public Item getTabIconItem()
         {
-            return Items.diamond_sword;
+            return ModItems.lumberAxe;
         }
     };
 }

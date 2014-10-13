@@ -9,11 +9,13 @@ import cpw.mods.fml.common.gameevent.PlayerEvent;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.common.MinecraftForge;
 import tv.savageboy74.usefulthings.client.handler.KeyInputEventHandler;
 import tv.savageboy74.usefulthings.common.handler.ConfigHandler;
+import tv.savageboy74.usefulthings.common.handler.GuiHandler;
 import tv.savageboy74.usefulthings.common.init.ModBlocks;
 import tv.savageboy74.usefulthings.common.init.ModItems;
 import tv.savageboy74.usefulthings.common.init.ModRecipes;
@@ -44,6 +46,8 @@ public class UsefulThings
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
         proxy.registerKeyBindings();
+        proxy.registerRenderThings();
+        proxy.registerTileEntitySpecialRenderer();
 
         if (ConfigHandler.checkForUpdates == true) {
 
@@ -58,10 +62,16 @@ public class UsefulThings
         LogHelper.info("Pre-Initialization Complete.");
     }
 
+    public static boolean isSimulating()
+    {
+        return !FMLCommonHandler.instance().getEffectiveSide().isClient();
+    }
+
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
         FMLCommonHandler.instance().bus().register(new KeyInputEventHandler());
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 
         ModItems.init();
         ModBlocks.init();

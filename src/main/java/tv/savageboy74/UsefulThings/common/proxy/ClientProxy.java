@@ -12,4 +12,14 @@ public class ClientProxy extends CommonProxy
         ClientRegistry.registerKeyBinding(KeyBindings.placeholder);
         ClientRegistry.registerKeyBinding(KeyBindings.placeholder2);
     }
+
+    public void registerRenderThings()
+    {
+
+    }
+
+    public void registerTileEntitySpecialRenderer()
+    {
+
+    }
 }

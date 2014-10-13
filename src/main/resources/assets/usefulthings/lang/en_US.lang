@@ -1,3 +1,5 @@
+# Creative Tab(s)
+itemGroup.usefulThings=Useful Thingsww
 # Keys
 keys.usefulthings.category=Useful Things
 keys.usefulthings.placeholder=KeyBinding Placeholder
@@ -7,3 +9,6 @@ keys.usefulthings.placeholder2=KeyBinding Placeholder 2
 item.usefulthings:usefulAxe.name=Useful Axe
 item.usefulthings:usefulSword.name=Useful Sword [WIP]
 item.usefulthings:lumberAxe.name=Lumber Axe
+
+# Blocks
+tile.dyeMixer.name=Dye Mixer

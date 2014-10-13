@@ -13,6 +13,7 @@ import net.minecraft.item.ItemTool;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.oredict.OreDictionary;
 import tv.savageboy74.usefulthings.common.handler.ConfigHandler;
 import tv.savageboy74.usefulthings.common.init.ModCreativeTab;
 import tv.savageboy74.usefulthings.common.util.Reference;
