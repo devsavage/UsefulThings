@@ -22,8 +22,8 @@ group= "tv.savageboy74.usefulthings" // http://maven.apache.org/guides/mini/guid
 archivesBaseName = "UsefulThings"
 
 minecraft {
-    version = "1.7.10-10.13.0.1207"
-    assetDir = "eclipse/assets"
+    version = "1.7.10-10.13.2.1230"
+    runDir = "eclipse"
 }
 
 dependencies {

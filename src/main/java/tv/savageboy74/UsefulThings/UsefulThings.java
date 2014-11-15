@@ -91,7 +91,7 @@ public class UsefulThings
     @SubscribeEvent
     public void checkUpdate(PlayerEvent.PlayerLoggedInEvent event) {
         if (Reference.OUTDATED) {
-            event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.AQUA + "usefulthings " +  EnumChatFormatting.WHITE + "is " + EnumChatFormatting.DARK_RED + "outdated!"));
+            event.player.addChatComponentMessage(new ChatComponentText(EnumChatFormatting.AQUA + "UsefulThings " +  EnumChatFormatting.WHITE + "is " + EnumChatFormatting.DARK_RED + "outdated!"));
             event.player.addChatComponentMessage(new ChatComponentText("Current Version: " + EnumChatFormatting.DARK_RED + Reference.CURRENTVERSION + EnumChatFormatting.WHITE +  " Newest Version: " + EnumChatFormatting.DARK_GREEN + Reference.NEWVERSION));
         }
     }
